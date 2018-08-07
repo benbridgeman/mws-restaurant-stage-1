@@ -3,12 +3,41 @@
     width: calc((100% / 2) - 30px);
     box-sizing: border-box;
   }
+  #restaurants-list .restaurant-img {
+    height: 300px;
+    max-height: 300px;
+  }
+  #restaurant-container, #reviews-container {
+    padding: 40px 1.5em 30px;
+  }
 }
 
 @media screen and (min-width: 900px) {
   #restaurants-list li {
     width: calc((100% / 3) - 30px);
     box-sizing: border-box;
+  }
+  #breadcrumb {
+    width: calc(50% - 80px);
+  }
+  .inside #map-container {
+    background: blue none repeat scroll 0 0;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 80px;
+    width: 50%;
+  }
+  .inside #map {
+    height: 100%;
+  }
+  #restaurant-container {
+    padding: 20px 40px 30px;
+    width: 50%;
+  }
+  #reviews-container {
+    padding: 20px 40px 80px;
+    width: 50%;
   }
 }
 

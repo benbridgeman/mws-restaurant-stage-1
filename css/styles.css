@@ -86,7 +86,7 @@ nav h1 a {
   background-color: #eee;
   font-size: 17px;
   margin: 0;
-  width: calc(50% - 80px);
+  width: 100%;
 }
 
 /* Display list items side by side */
@@ -120,7 +120,7 @@ nav h1 a {
 /* ====================== Map ====================== */
 
 #map {
-  height: 400px;
+  min-height: 400px;
   width: 100%;
   background-color: #ccc;
 }
@@ -129,7 +129,7 @@ nav h1 a {
 
 .filter-options {
   width: 100%;
-  padding-top: 15px;
+  padding: 15px 0 5px 15px;
   background-color: orange;
   align-items: center;
 }
@@ -175,13 +175,15 @@ nav h1 a {
   min-height: 380px;
   padding: 0;
   text-align: left;
-  max-width: 330px;
   box-sizing: border-box;
 }
 
 #restaurants-list .restaurant-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  min-height: 248px;
+  min-height: 300px;
   overflow-x: hidden;
   overflow-y: hidden;
 }
@@ -190,7 +192,6 @@ nav h1 a {
   background-color: #ccc;
   display: block;
   margin: 0;
-  height: 248px;
 }
 
 #restaurants-list .info-wrapper {
@@ -229,7 +230,7 @@ nav h1 a {
 /* ====================== Restaurant Details ====================== */
 
 .inside header {
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   z-index: 1000;
@@ -237,23 +238,24 @@ nav h1 a {
 
 .inside #map-container {
   background: blue none repeat scroll 0 0;
-  height: 87%;
-  position: fixed;
-  right: 0;
-  top: 80px;
-  width: 50%;
+  min-height: 500px;
+  width: 100%;
 }
 
 .inside #map {
   background-color: #ccc;
-  height: 100%;
+  height: 500px;
   width: 100%;
+}
+
+div .leaflet-left {
+  z-index: 401;
 }
 
 .inside #footer {
   bottom: 0;
-  position: fixed;
-  width: 100%;
+  position: absolute;
+  width: 50%;
 }
 
 #restaurant-name {
@@ -293,13 +295,13 @@ nav h1 a {
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  padding: 140px 40px 30px;
-  width: 50%;
+  padding: 40px 1em 30px;
+  width: 100%;
   box-sizing: border-box;
 }
 
 #reviews-container {
-  padding: 30px 40px 80px;
+  padding-bottom: 85px;
 }
 
 #reviews-container h2 {
