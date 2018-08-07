@@ -242,7 +242,7 @@ nav h1 a {
 
 .inside #footer {
   bottom: 0;
-  position: absolute;
+  position: fixed;
   width: 100%;
 }
 
