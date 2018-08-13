@@ -159,6 +159,8 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  */
 createRestaurantHTML = (restaurant) => {
 	const li = document.createElement('li');
+	li.setAttribute('aria-label', restaurant.name);
+	li.setAttribute('tabindex', '0');
 
 	const imageContainer = document.createElement('div');
 	imageContainer.className = 'restaurant-image-wrapper';
@@ -167,11 +169,13 @@ createRestaurantHTML = (restaurant) => {
 	image.className = 'restaurant-img';
 	image.src = DBHelper.imageUrlForRestaurant(restaurant);
 	image.alt = DBHelper.imageAltForRestaurant(restaurant);
+	image.setAttribute('tabindex', '0');
 	imageContainer.append(image);
 	li.append(imageContainer);
 
 	const infoContainer = document.createElement('div');
 	infoContainer.className = 'info-wrapper';
+	infoContainer.setAttribute('tabindex', '0');
 
 	const name = document.createElement('h1');
 	name.innerHTML = restaurant.name;

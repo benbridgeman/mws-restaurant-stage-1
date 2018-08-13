@@ -1,6 +1,10 @@
 @charset "utf-8";
 /* CSS Document */
 
+.hidden {
+  display: none;
+}
+
 body, td, th, p {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 10pt;
@@ -90,6 +94,15 @@ nav h1 a {
   box-sizing: border-box;
 }
 
+.skip-link {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 /* Display list items side by side */
 
 #breadcrumb li {
@@ -176,6 +189,7 @@ nav h1 a {
   margin: 15px;
   min-height: 380px;
   width: 100%;
+  max-width: 320px;
   padding: 0;
   text-align: left;
   box-sizing: border-box;
