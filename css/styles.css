@@ -1,10 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
 
-.hidden {
-  display: none;
-}
-
 body, td, th, p {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 10pt;
